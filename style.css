@@ -1,51 +1,150 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   
 }
 
-
-body {
-    background-color: rgb(85, 85, 220);
-
+body{
+    background-color: rgb(85, 85, 220)
 }
 
-
-.buttons {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    padding: 30px;
-    background-color: rgb(223, 86, 98);
-    border: none;
-    border-radius: 50% ;
-    z-index: 1;
-    align-content: space-between;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
-}
-
-.contenedor2 {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
+.contenedor{
     background-color: white;
-    padding: 200px;
-    transform-origin: 0 0;
+    height: 1000px;
+
 }
 
-.contenedor2 p {
-    width: 100%;
+.contenedorcirculo {
+    background-color: black;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+    padding-top:5rem;
+}
+.circulo {
+    display: flex;
+    flex-direction: column;
+    background-color: #ff7979;
+    width: 100px;
+    height: 100px;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+    top: -70px;
+    left: -70px;
+    padding: 50px 0px 0px 50px;
+    border: none;
+    transition: all 0.5s;
+
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 15% 20% 15%;
+    transition: all 0.5s;
+    position: absolute;
+    top: -80px;
+    left: -70px;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.turn {
+    rotate: -20deg;
+    transform: translateX(300px) translateY(-80px);
 }
 
 .imagen {
-    display: flex;
-    width: 100%;
+    width: 900px;
     height: 600px;
+}
 
+.contenedor p {
+    width: 100%;
+}
+
+
+
+.change {
+    transform: rotate(-40deg) translateX(300px) translateY(-200px)
+}
+
+.rotate {
+    rotate: -90deg;
+}
+
+.circulo >i:first-child {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top: 20px;
+    left: 20px;
+
+}
+
+.circulo >i:last-child {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    right: 70px;
+}
+
+
+/* .navcontact{
+    display: flex;
+    flex-direction: column;
+    color: red; 
+    position: fixed;
+    bottom: 90px;
+    left: 50px;
+    z-index: -3;
+    
+} */
+
+.navcontact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    position: fixed;
+    bottom: 2rem;
+    left: -15rem;
+    margin-top: 10rem;
+}
+
+.home, .about, .contact{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;;
+    color: white;
+    font-size: 1.2rem;
+    
+    transition: transform 0.5s linear;
+    cursor: pointer;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding-left: 30px;
+    padding-top: 2px; */
+    
+}
+
+.contact {
+    margin-left: 30px;
+}
+
+.about{
+    margin-left: 15px;
+    }
+
+.navcontact h3 {
+    font-size: 20px;
 }
